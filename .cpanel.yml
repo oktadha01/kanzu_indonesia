@@ -1,6 +1,7 @@
 ---
 deployment:
   tasks:
+    # Deploy to kanzupermaiabadi.co.id
     - export DEPLOYPATH=/home/kina3126/public_html/kanzupermaiabadi.co.id/
     - echo "Deploying to $DEPLOYPATH"
     - /bin/cp -R application "$DEPLOYPATH" || { echo "Failed to copy application to $DEPLOYPATH"; exit 1; }
@@ -14,6 +15,7 @@ deployment:
     - /bin/cp index.php "$DEPLOYPATH" || { echo "Failed to copy index.php to $DEPLOYPATH"; exit 1; }
     - cd "$DEPLOYPATH" && /usr/local/bin/composer install --no-dev --optimize-autoloader || { echo "Composer install failed in $DEPLOYPATH"; exit 1; }
 
+    # Deploy to altonpermaiabadi.co.id
     - export DEPLOYPATH=/home/kina3126/public_html/altonpermaiabadi.co.id/
     - echo "Deploying to $DEPLOYPATH"
     - /bin/cp -R application "$DEPLOYPATH" || { echo "Failed to copy application to $DEPLOYPATH"; exit 1; }
@@ -27,6 +29,7 @@ deployment:
     - /bin/cp index.php "$DEPLOYPATH" || { echo "Failed to copy index.php to $DEPLOYPATH"; exit 1; }
     - cd "$DEPLOYPATH" && /usr/local/bin/composer install --no-dev --optimize-autoloader || { echo "Composer install failed in $DEPLOYPATH"; exit 1; }
 
+    # Deploy to alamkautsarsejahtera.co.id
     - export DEPLOYPATH=/home/kina3126/public_html/alamkautsarsejahtera.co.id/
     - echo "Deploying to $DEPLOYPATH"
     - /bin/cp -R application "$DEPLOYPATH" || { echo "Failed to copy application to $DEPLOYPATH"; exit 1; }
