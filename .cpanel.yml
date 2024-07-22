@@ -1,16 +1,43 @@
 ---
 deployment:
   tasks:
-    - export DEPLOY_PATHS="/home/kina3126/public_html/kanzupermaiabadi.co.id/ /home/kina3126/public_html/altonpermaiabadi.co.id/ /home/kina3126/public_html/alamkautsarsejahtera.co.id/"
-    - for DEPLOYPATH in $DEPLOY_PATHS; do
-        echo "Deploying to $DEPLOYPATH";
-        /bin/cp -R application "$DEPLOYPATH" || { echo "Failed to copy application to $DEPLOYPATH"; exit 1; };
-        /bin/cp -R assets "$DEPLOYPATH" || { echo "Failed to copy assets to $DEPLOYPATH"; exit 1; };
-        /bin/cp -R system "$DEPLOYPATH" || { echo "Failed to copy system to $DEPLOYPATH"; exit 1; };
-        /bin/cp .htaccess "$DEPLOYPATH" || { echo "Failed to copy .htaccess to $DEPLOYPATH"; exit 1; };
-        /bin/cp .cpanel.yml "$DEPLOYPATH" || { echo "Failed to copy .cpanel.yml to $DEPLOYPATH"; exit 1; };
-        /bin/cp .gitignore "$DEPLOYPATH" || { echo "Failed to copy .gitignore to $DEPLOYPATH"; exit 1; };
-        /bin/cp index.php "$DEPLOYPATH" || { echo "Failed to copy index.php to $DEPLOYPATH"; exit 1; };
-        cd "$DEPLOYPATH" && /usr/local/bin/composer install --no-dev --optimize-autoloader || { echo "Composer install failed in $DEPLOYPATH"; exit 1; };
-      done
+    - export DEPLOYPATH=/home/kina3126/public_html/kanzupermaiabadi.co.id/
+    - echo "Deploying to $DEPLOYPATH"
+    - /bin/cp -R application "$DEPLOYPATH" || { echo "Failed to copy application to $DEPLOYPATH"; exit 1; }
+    - /bin/cp -R assets "$DEPLOYPATH" || { echo "Failed to copy assets to $DEPLOYPATH"; exit 1; }
+    - /bin/cp -R system "$DEPLOYPATH" || { echo "Failed to copy system to $DEPLOYPATH"; exit 1; }
+    # - /bin/cp -R vendor "$DEPLOYPATH" || { echo "Failed to copy vendor to $DEPLOYPATH"; exit 1; }
+    - /bin/cp .htaccess "$DEPLOYPATH" || { echo "Failed to copy .htaccess to $DEPLOYPATH"; exit 1; }
+    - /bin/cp .cpanel.yml "$DEPLOYPATH" || { echo "Failed to copy .cpanel.yml to $DEPLOYPATH"; exit 1; }
+    - /bin/cp .gitignore "$DEPLOYPATH" || { echo "Failed to copy .gitignore to $DEPLOYPATH"; exit 1; }
+    # - /bin/cp composer.json "$DEPLOYPATH" || { echo "Failed to copy composer.json to $DEPLOYPATH"; exit 1; }
+    - /bin/cp index.php "$DEPLOYPATH" || { echo "Failed to copy index.php to $DEPLOYPATH"; exit 1; }
+    - cd "$DEPLOYPATH" && /usr/local/bin/composer install --no-dev --optimize-autoloader || { echo "Composer install failed in $DEPLOYPATH"; exit 1; }
+
+    - export DEPLOYPATH=/home/kina3126/public_html/altonpermaiabadi.co.id/
+    - echo "Deploying to $DEPLOYPATH"
+    - /bin/cp -R application "$DEPLOYPATH" || { echo "Failed to copy application to $DEPLOYPATH"; exit 1; }
+    - /bin/cp -R assets "$DEPLOYPATH" || { echo "Failed to copy assets to $DEPLOYPATH"; exit 1; }
+    - /bin/cp -R system "$DEPLOYPATH" || { echo "Failed to copy system to $DEPLOYPATH"; exit 1; }
+    # - /bin/cp -R vendor "$DEPLOYPATH" || { echo "Failed to copy vendor to $DEPLOYPATH"; exit 1; }
+    - /bin/cp .htaccess "$DEPLOYPATH" || { echo "Failed to copy .htaccess to $DEPLOYPATH"; exit 1; }
+    - /bin/cp .cpanel.yml "$DEPLOYPATH" || { echo "Failed to copy .cpanel.yml to $DEPLOYPATH"; exit 1; }
+    - /bin/cp .gitignore "$DEPLOYPATH" || { echo "Failed to copy .gitignore to $DEPLOYPATH"; exit 1; }
+    # - /bin/cp composer.json "$DEPLOYPATH" || { echo "Failed to copy composer.json to $DEPLOYPATH"; exit 1; }
+    - /bin/cp index.php "$DEPLOYPATH" || { echo "Failed to copy index.php to $DEPLOYPATH"; exit 1; }
+    - cd "$DEPLOYPATH" && /usr/local/bin/composer install --no-dev --optimize-autoloader || { echo "Composer install failed in $DEPLOYPATH"; exit 1; }
+
+    - export DEPLOYPATH=/home/kina3126/public_html/alamkautsarsejahtera.co.id/
+    - echo "Deploying to $DEPLOYPATH"
+    - /bin/cp -R application "$DEPLOYPATH" || { echo "Failed to copy application to $DEPLOYPATH"; exit 1; }
+    - /bin/cp -R assets "$DEPLOYPATH" || { echo "Failed to copy assets to $DEPLOYPATH"; exit 1; }
+    - /bin/cp -R system "$DEPLOYPATH" || { echo "Failed to copy system to $DEPLOYPATH"; exit 1; }
+    # - /bin/cp -R vendor "$DEPLOYPATH" || { echo "Failed to copy vendor to $DEPLOYPATH"; exit 1; }
+    - /bin/cp .htaccess "$DEPLOYPATH" || { echo "Failed to copy .htaccess to $DEPLOYPATH"; exit 1; }
+    - /bin/cp .cpanel.yml "$DEPLOYPATH" || { echo "Failed to copy .cpanel.yml to $DEPLOYPATH"; exit 1; }
+    - /bin/cp .gitignore "$DEPLOYPATH" || { echo "Failed to copy .gitignore to $DEPLOYPATH"; exit 1; }
+    # - /bin/cp composer.json "$DEPLOYPATH" || { echo "Failed to copy composer.json to $DEPLOYPATH"; exit 1; }
+    - /bin/cp index.php "$DEPLOYPATH" || { echo "Failed to copy index.php to $DEPLOYPATH"; exit 1; }
+    - cd "$DEPLOYPATH" && /usr/local/bin/composer install --no-dev --optimize-autoloader || { echo "Composer install failed in $DEPLOYPATH"; exit 1; }
+
     - echo "Deployment completed successfully."
