@@ -227,8 +227,8 @@
 
     <!-- <script src="<?php echo base_url('assets'); ?>/vendor/php-email-form/validate.js"></script> -->
     <!-- Template Main JS File -->
-    <script src="<?php echo base_url('assets'); ?>/js/main.js"></script>
-    <script src="<?php echo base_url('assets'); ?>/vendor/pushnotif/pushnotif.js"></script>
+    <!-- <script src="<?php echo base_url('assets'); ?>/js/main.js"></script> -->
+    <!-- <script src="<?php echo base_url('assets'); ?>/vendor/pushnotif/pushnotif.js"></script> -->
     <script src="<?php echo base_url('assets'); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
