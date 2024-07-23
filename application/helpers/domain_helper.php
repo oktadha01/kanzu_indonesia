@@ -3,8 +3,10 @@
 if (!function_exists('get_company_info')) {
     function get_company_info($db)
     {
-        $url_host = 'https://kanzupermaiabadi.co.id/perumah/murah';
-        $base_url = 'http://localhost/admin_kanzu';
+        // $url_host = 'https://kanzupermaiabadi.co.id/perumah/murah';
+        // $base_url = 'http://localhost/admin_kanzu';
+        $url_host = base_url();
+        $base_url = 'https://admin.kanzupermaiabadi.co.id/';
         $parsedUrl = parse_url($url_host);
         $domain = $parsedUrl['host'];
 
