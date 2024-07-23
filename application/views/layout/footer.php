@@ -21,14 +21,26 @@
 		border-radius: 10px;
 	}
 </style>
+<?php
+$this->load->helper('domain_helper'); // Load the helper
+$company_info = get_company_info($this->db); // Call the helper function
+
+if ($company_info !== null) {
+	$domain = $company_info['domain'];
+	$nm_company = $company_info['nm_company'];
+	$logo_company = $company_info['logo_company'];
+	$base_url = $company_info['base_url'];
+} else {
+}
+?>
 <section id="contact" class="contact pb-0 pt-0">
 	<footer style="background: #033b6c;">
 		<button class="js-push-btn" style="display: none;">
 			Subscribe Push Messaging
 		</button>
-		<span class="device"></span>
+		<span class="device" hidden></span>
 		<div>
-			<span class="logo">Kanzu Permai Abadi</span>
+			<span class="logo"><?= $nm_company; ?></span>
 			<hr style="color: white;">
 		</div>
 		<div class="row">
@@ -56,9 +68,9 @@
 				</div>
 			</div>
 		</div>
-		<div id="copyright">
+		<div id="copyright" style="text-transform: uppercase;">
 			<hr>
-			&copy; 2023 PT KANPA
+			&copy; 2024 PT <?= $nm_company; ?>
 		</div>
 
 	</footer>
