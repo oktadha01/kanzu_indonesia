@@ -44,4 +44,18 @@ class M_produk extends CI_Model
             return $query->result();
         }
     }
+    function m_data_perum_kategori($id_company, $kategori)
+    {
+        $this->db->select('*');
+        $this->db->from('perum');
+        $this->db->Join('tipe', 'tipe.id_tipe_perum = perum.id_perum');
+        $this->db->where('perum.id_company_perum', $id_company);
+        $this->db->where('tipe.kategori_tipe', 'subsidi');
+        $this->db->ORDER_BY('perum.order_perum', 'asc');
+        $query = $this->db->get();
+        return $query->result();
+        $result = $query->result();
+        $num_rows = $query->num_rows();
+        return ['result' => $result, 'num_rows' => $num_rows];
+    }
 }

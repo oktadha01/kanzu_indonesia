@@ -7,7 +7,7 @@
 <section id="" class="pt-5 mt-3">
     <div class="row mb-2">
         <a href="https://wa.me/+6282333507931?text=Hallo%20PT%20Kanpa%2C%20Saya%20ingin%20menanyakan%20Rumah%20Subsidi%20lebih%20lanjut...">
-            <img src="<?php echo base_url('upload'); ?>/header-SUBSIDI.png" class=" size-img-dash img-fluid">
+            <img src="<?= $base_url; ?>/upload/header-SUBSIDI.png" class=" size-img-dash img-fluid">
         </a>
     </div>
     <div class="p-2" data-aos="fade-up">
@@ -31,7 +31,7 @@
                         ?>
                                 <a href="<?php echo base_url('detail'); ?>/perum/<?php echo $tittle; ?>/tipe/<?php echo $data->luas_bangunan; ?>/<?php echo $data->luas_tanah; ?>">
                                     <div class="img border-r-0px" style="position: relative;">
-                                        <img src="<?php echo base_url('upload'); ?>/<?php echo $foto->foto_tipe; ?>" srcset="<?php echo base_url('upload'); ?>/<?php echo $foto->foto_tipe; ?> 1x, <?php echo base_url('upload'); ?>/<?php echo $foto->foto_tipe; ?> 3x" class=" size-img-dash img-fluid" style="border-top-left-radius: 12px;border-top-right-radius: 12px;">
+                                        <img src="<?= $base_url; ?>/upload/<?php echo $foto->foto_tipe; ?>" srcset="<?= $base_url; ?>/upload/<?php echo $foto->foto_tipe; ?> 1x, <?= $base_url; ?>/upload/<?php echo $foto->foto_tipe; ?> 3x" class=" size-img-dash img-fluid" style="border-top-left-radius: 12px;border-top-right-radius: 12px;">
 
                                         <div class="label-promo"><?php echo $data->promo; ?></div>
                                         <div class="bottom-right promo">Perumahan <?php echo $data->kategori_tipe; ?></div>

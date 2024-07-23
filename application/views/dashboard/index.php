@@ -128,18 +128,20 @@
                     endforeach;
                     ?>
                     <?php
-                    foreach ($data_foto_slide_subsidi as $data) :
+                    if ($show_header == 'show') {
+                        foreach ($data_foto_slide_subsidi as $data) :
                     ?>
 
-                        <div class="swiper-slide">
-                            <a href="<?php echo base_url('Kategori'); ?>/perumahan/subsidi">
-                                <center>
-                                    <img src="<?= $base_url; ?>/upload/<?= $data->header_foto; ?>" class="img-fluid" alt="" tyle="border-radius: 25px;">
-                                </center>
-                            </a>
-                        </div>
+                            <div class="swiper-slide">
+                                <a href="<?php echo base_url('perumahan'); ?>/subsidi">
+                                    <center>
+                                        <img src="<?= $base_url; ?>/upload/<?= $data->header_foto; ?>" class="img-fluid" alt="" style="border-radius: 25px;">
+                                    </center>
+                                </a>
+                            </div>
                     <?php
-                    endforeach;
+                        endforeach;
+                    }
                     ?>
                     <?php
                     foreach ($data_foto_slide_perumahan as $data) :
@@ -154,7 +156,7 @@
                                 <div class="swiper-slide">
                                     <a href="<?php echo base_url('detail'); ?>/perum/<?php echo $tittle; ?>/tipe/<?php echo $tipe_perum->luas_bangunan; ?>/<?php echo $tipe_perum->luas_tanah; ?>">
                                         <center>
-                                            <img src="<?= $base_url; ?>/upload/<?php echo $data->header_foto; ?>" class="img-fluid" alt="" tyle="border-radius: 25px;">
+                                            <img src="<?= $base_url; ?>/upload/<?php echo $data->header_foto; ?>" class="img-fluid" alt="" style="border-radius: 25px;">
                                         </center>
                                     </a>
                                 </div>
@@ -174,7 +176,7 @@
                         <div class="swiper-slide">
                             <a href="<?php echo $data->text_wa; ?>">
                                 <center>
-                                    <img src="<?= $base_url; ?>/upload/<?php echo $data->header_foto; ?>" class="img-fluid" alt="" tyle="border-radius: 25px;">
+                                    <img src="<?= $base_url; ?>/upload/<?php echo $data->header_foto; ?>" class="img-fluid" alt="" style="border-radius: 25px;">
                                 </center>
                             </a>
                         </div>
@@ -390,8 +392,8 @@
     <section id="" class="contact p-0">
         <div class="" data-aos="fade-up">
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.0907201097357!2d110.39826681509645!3d-7.115485094861684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7089a95628a559%3A0x2f5966fe8e2eb5eb!2sPT%20Kanpa%20(%20Kanzu%20Permai%20Abadi%20)!5e0!3m2!1sid!2sid!4v1672375026580!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe> -->
+                <!-- <?= $map_company; ?> -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
             </div><!-- End Google Maps -->
         </div>
     </section><!-- End About Section -->

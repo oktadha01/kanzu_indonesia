@@ -3,10 +3,10 @@
 if (!function_exists('get_company_info')) {
     function get_company_info($db)
     {
-        // $url_host = 'https://kanzupermaiabadi.co.id/perumah/murah';
-        // $base_url = 'http://localhost/admin_kanzu';
-        $url_host = base_url();
-        $base_url = 'https://admin.kanzupermaiabadi.co.id';
+        $url_host = 'https://kanzupermaiabadi.co.id/perumah/murah';
+        $base_url = 'http://localhost/admin_kanzu';
+        // $url_host = base_url();
+        // $base_url = 'https://admin.kanzupermaiabadi.co.id';
         $parsedUrl = parse_url($url_host);
         $domain = $parsedUrl['host'];
 
@@ -24,7 +24,7 @@ if (!function_exists('get_company_info')) {
                 return null;
         }
 
-        $db->select('id_company, nm_company, logo_company, desc_company');
+        $db->select('*');
         $db->from('company');
         $db->where('id_company', $id_company);
         $query = $db->get();
@@ -36,6 +36,7 @@ if (!function_exists('get_company_info')) {
                 'nm_company' => $row->nm_company,
                 'logo_company' => $row->logo_company,
                 'description' => $row->desc_company,
+                'map_company' => $row->map_company,
                 'domain' => $domain,
                 'base_url' => $base_url
             ];

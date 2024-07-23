@@ -62,4 +62,23 @@ class Perumahan extends CI_Controller
         $data['data_tipe'] = $this->m_produk->m_data_tipe($lokasi);
         $this->load->view('layout/index', $data);
     }
+
+    function subsidi()
+    {
+        $company_info = get_company_info($this->db); // Call the helper function
+
+        if ($company_info !== null) {
+            $id_company = $company_info['id_company'];
+            $data['base_url'] = $company_info['base_url'];
+        } else {
+        }
+        $kategori = $this->uri->segment(2);
+
+        $data['_title'] = 'Kanzu Group Indonesia';
+        $data['_script'] = 'kategori_perum/kategori_perum_js';
+        $data['_view'] = 'kategori_perum/kategori_perum';
+        // $data['data_foto_slide'] = $this->m_kategori->m_data_fotoslide();
+        $data['data_perum'] = $this->m_produk->m_data_perum_kategori($id_company, $kategori);
+        $this->load->view('layout/index', $data);
+    }
 }
