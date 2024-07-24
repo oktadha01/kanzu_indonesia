@@ -34,7 +34,7 @@ if ($company_info !== null) {
 }
 ?>
 <section id="contact" class="contact pb-0 pt-0">
-	<footer style="background: #033b6c;">
+	<footer class="bg-<?= str_replace('.co.id', '', $domain); ?>">
 		<button class="js-push-btn" style="display: none;">
 			Subscribe Push Messaging
 		</button>

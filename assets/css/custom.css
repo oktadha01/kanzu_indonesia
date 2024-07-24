@@ -2,6 +2,16 @@ body {
     font-family: 'Poppins';
 }
 
+.bg-kanzupermaiabadi {
+    background: #033b6c;
+}
+.bg-altonpermaiabadi {
+    background: #2f865b;
+}
+.bg-alamkautsarsejahtera {
+    background: #2f865b;
+}
+
 .header .logo h1 {
     font-size: 32px;
     font-weight: 300;
@@ -1196,7 +1206,7 @@ _footer__title {
 
 footer {
     background-color: #6c757d;
-    padding: 3em 4em 2em;
+    padding: 2em 4em 2em;
 }
 
 footer .logo {
