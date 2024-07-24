@@ -120,7 +120,7 @@
                         <div class="swiper-slide">
                             <a href="<?php echo base_url('Perumahan'); ?>">
                                 <center>
-                                    <img src="<?= $base_url; ?>/upload/<?= $data->header_foto; ?>" class="img-fluid" alt="" style="border-radius: 25px;">
+                                    <img src="<?= $base_url; ?>/upload/<?= $data->header_foto; ?>" class="img-fluid" alt="">
                                 </center>
                             </a>
                         </div>
@@ -135,7 +135,7 @@
                             <div class="swiper-slide">
                                 <a href="<?php echo base_url('perumahan'); ?>/subsidi">
                                     <center>
-                                        <img src="<?= $base_url; ?>/upload/<?= $data->header_foto; ?>" class="img-fluid" alt="" style="border-radius: 25px;">
+                                        <img src="<?= $base_url; ?>/upload/<?= $data->header_foto; ?>" class="img-fluid" alt="">
                                     </center>
                                 </a>
                             </div>
@@ -156,7 +156,7 @@
                                 <div class="swiper-slide">
                                     <a href="<?php echo base_url('detail'); ?>/perum/<?php echo $tittle; ?>/tipe/<?php echo $tipe_perum->luas_bangunan; ?>/<?php echo $tipe_perum->luas_tanah; ?>">
                                         <center>
-                                            <img src="<?= $base_url; ?>/upload/<?php echo $data->header_foto; ?>" class="img-fluid" alt="" style="border-radius: 25px;">
+                                            <img src="<?= $base_url; ?>/upload/<?php echo $data->header_foto; ?>" class="img-fluid" alt="">
                                         </center>
                                     </a>
                                 </div>
@@ -176,7 +176,7 @@
                         <div class="swiper-slide">
                             <a href="<?php echo $data->text_wa; ?>">
                                 <center>
-                                    <img src="<?= $base_url; ?>/upload/<?php echo $data->header_foto; ?>" class="img-fluid" alt="" style="border-radius: 25px;">
+                                    <img src="<?= $base_url; ?>/upload/<?php echo $data->header_foto; ?>" class="img-fluid" alt="">
                                 </center>
                             </a>
                         </div>
